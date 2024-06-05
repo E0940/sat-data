@@ -38,6 +38,23 @@ public class Main {
     catch(Exception e){
       System.out.println("file not found");
     }
+
+    // stores all reading scores
+    ArrayList<Integer> totalReadingScore = new ArrayList<Integer>();
+
+    try{
+      Scanner s = new Scanner(new File("reading.txt"));
+
+      while(s.hasNext()){
+        int score = Integer.parseInt(s.nextLine());
+          totalReadingScore.add(score);
+      }
+      s.close();
+    }
+
+    catch(Exception e){
+      System.out.println("file not found");
+    }
     
     // make sure all data entered the ArrayList
     // System.out.println(totalScore);
