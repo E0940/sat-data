@@ -59,15 +59,29 @@ public class Main {
     // make sure all data entered the ArrayList
     // System.out.println(totalScore);
     System.out.println(totalScore.size()+" students took the exam");
-    
+
+    // finds the avg score for total sat
     int total=0;
     for(int score:totalScore){
       total+=score;
     }
     double average=(double)total/totalScore.size();
-    System.out.println("average: "+average);
+    System.out.println("Average for total score: "+average);
 
-    
+    // finds the avg score for math sat
+    total=0;
+    for(int score:totalMathScore){
+      total+=score;
+    }
+    average=(double)total/totalScore.size();
+    System.out.println("Average for total math score: "+average);
+
+    // finds the avg score for reading sat
+    total=0;
+    for(int score:totalReadingScore){
+      total+=score;
+    }
+    average=(double)total/totalScore.size();
+    System.out.println("Average for total reading score: "+average);
   }
-
 }
