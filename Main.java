@@ -17,11 +17,28 @@ public class Main {
       }
       s.close();
     }
-
+      
     catch(Exception e){
       System.out.println("file not found");
     }
 
+    // stores all math scores
+    ArrayList<Integer> totalMathScore = new ArrayList<Integer>();
+
+    try{
+      Scanner s = new Scanner(new File("math.txt"));
+
+      while(s.hasNext()){
+        int score = Integer.parseInt(s.nextLine());
+        totalMathScore.add(score);
+      }
+      s.close();
+    }
+        
+    catch(Exception e){
+      System.out.println("file not found");
+    }
+    
     // make sure all data entered the ArrayList
     // System.out.println(totalScore);
     System.out.println(totalScore.size()+" students took the exam");
@@ -32,6 +49,8 @@ public class Main {
     }
     double average=(double)total/totalScore.size();
     System.out.println("average: "+average);
+
+    
   }
 
 }
